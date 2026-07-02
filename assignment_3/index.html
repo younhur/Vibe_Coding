@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📝 To-Do App (Firebase)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>📝 To-Do</h1>
+
+    <!-- 입력 영역 -->
+    <form id="add-form" class="add-form">
+      <input
+        id="new-task"
+        type="text"
+        placeholder="새 할 일을 입력하세요..."
+        autocomplete="off"
+        required
+      />
+      <button type="submit">추가</button>
+    </form>
+
+    <!-- 분류 탭 -->
+    <div class="tabs">
+      <button class="tab active" data-filter="all">All <span id="count-all">0</span></button>
+      <button class="tab" data-filter="todo">Todo <span id="count-todo">0</span></button>
+      <button class="tab" data-filter="done">Done <span id="count-done">0</span></button>
+    </div>
+
+    <!-- 목록 -->
+    <ul id="task-list" class="task-list"></ul>
+    <p id="empty-msg" class="empty-msg">할 일이 없습니다 🎉</p>
+  </main>
+
+  <!-- 앱 로직 (Firebase 모듈은 app.js 내부에서 import) -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
