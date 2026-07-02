@@ -8,3 +8,5 @@ git push
 echo .DS_Store >> .gitignore
 echo .vscode/
 .vscode/
+.vercel
+.env*
